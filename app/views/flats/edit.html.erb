@@ -1,0 +1,19 @@
+
+
+
+<div class='bg-light mx-auto' style='max-width:600px;padding:20px;'>
+
+  <h2>Edit Flat</h2>
+
+  <%= simple_form_for @flat, local: true do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :price_per_night %>
+    <%= f.input :number_of_guests %>
+    <%= f.button :submit, "Update Flat", class: "btn-primary" %>
+  <% end %>
+
+  <%= link_to "Cancel", flats_path %>
+
+</div>
